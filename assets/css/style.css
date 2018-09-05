@@ -1,0 +1,21 @@
+body {
+    background: url(../images/pattern.jpg);
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+#instructions {
+    margin-bottom: 10px;
+}
+
+.jumbotron {
+    background: purple;
+    color: beige;
+}
+
+.card-header {
+    background: teal;
+    color: beige;
+}

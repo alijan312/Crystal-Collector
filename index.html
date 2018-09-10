@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
+
 
 </head>
 
@@ -45,6 +45,7 @@
                     <h5 class="card-header">Target Score</h5>
                     <div class="card-body">
                         <div class="text-center"></div>
+                        <h5 id="targetNumber"></h5>
                     </div>
 
                 </div>
@@ -54,6 +55,7 @@
                     <h5 class="card-header">Your Score</h5>
                     <div class="card-body">
                         <div class="text-center"></div>
+                        <h5 id="userScore"></h5>
                     </div>
 
                 </div>
@@ -62,7 +64,7 @@
                 <div id="crystals" class="card">
                     <h5 class="card-header">Crystal Selection</h5>
                     <div class="card-body">
-                        <div class="text-center"></div>
+                        <div class="text-center" id="crystalimages"></div>
                     </div>
 
                 </div>
@@ -76,6 +78,7 @@
                     <h5 class="card-header">Win Count</h5>
                     <div class="card-body">
                         <div class="text-center"></div>
+                        <h3 id="winScore"></h3>
                     </div>
 
                 </div>
@@ -85,12 +88,17 @@
                     <h5 class="card-header">Loss Count</h5>
                     <div class="card-body">
                         <div class="text-center"></div>
+                        <h3 id="lossScore"></h3>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@ var targetScore = "";
 var counter = 0;
 var win = 0;
 var loss = 0;
-var crystalPoints = [3, 6, 12, 13, 9, 11, 7];
+var crystalPoints = [];
 var images = ["./assets/images/BlueCrystal.jpg", "./assets/images/GreenCrystal.png", "./assets/images/OrangeCrystal.jpg", "./assets/images/RedCrystal.jpg"];
 
 function randomtargetScore() {
@@ -12,12 +12,21 @@ function randomtargetScore() {
 
 randomtargetScore();
 
+function randomCrystal () {
+    crystalPoints.length = 0;
+    for (var i=0; i<4; i++) {
+        crystalPoints.push(Math.floor(Math.random() * 20) + 1);
+    }
+}
+
+randomCrystal();
 
 
-
-function initialize () {
-    randomtargetScore ();
+function initialize() {
+    randomtargetScore();
     counter = 0;
+    $("#userScore").text(counter);
+    randomCrystal();
 
 
 }
@@ -25,6 +34,7 @@ function initialize () {
 
 $("#winScore").text(win);
 $("#lossScore").text(loss);
+$("#userScore").text(counter);
 
 
 for (var i = 0; i < crystalPoints.length; i++) {
@@ -37,7 +47,7 @@ for (var i = 0; i < crystalPoints.length; i++) {
 }
 
 $(".crystalPictures").on("click", function () {
-    
+
     var value = ($(this).attr("value"));
     value = parseInt(value);
     counter += value;
@@ -45,16 +55,15 @@ $(".crystalPictures").on("click", function () {
 
     if (counter === targetScore) {
         win++;
+        alert("you win!");
         $("#winScore").text(win);
         initialize();
-    }
-    
-    else if (counter >= targetScore) {
+    } else if (counter >= targetScore) {
         loss++;
+        alert("you lose!");
         $("#lossScore").text(loss);
         initialize();
-    
-    }
-    
-});
 
+    }
+
+});
